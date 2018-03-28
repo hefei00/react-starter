@@ -10,7 +10,7 @@
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --no-semi --write",
+      "prettier --write",
       "git add"
     ]
   },
@@ -22,12 +22,8 @@
     "eject": "react-app-rewired eject"
   },
   "devDependencies": {
-    "antd": "^3.2.0",
-    "babel-plugin-import": "^1.6.3",
     "husky": "^0.14.3",
     "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6"
+    "prettier": "^1.10.2"
   }
 }
