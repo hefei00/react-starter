@@ -3,7 +3,7 @@ const { injectBabelPlugin, getLoader } = require('react-app-rewired')
 // use react-app-rewired to override the default config of create-react-app
 // https://github.com/timarney/react-app-rewired
 module.exports = function override(config, env) {
-  //demand loading
+  //demand loading for antd
   config = injectBabelPlugin(['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css' }], config)
 
   //add sass support
