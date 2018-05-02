@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
-import Topic from '../components/Topic'
+import Topic from '../../components/Topic'
 
 export default function Topics({ match }) {
   return (

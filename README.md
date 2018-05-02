@@ -3,6 +3,8 @@ a easy react starter base on create-react-app
 ## what's inside?
 * create-react-app, base starter
 * react-scripts-rewired, add custom config to CRA
+* redux, for state management
+* react-router, for routing
 * prettier, format code automatically
 ## how to use
 ```bash
