@@ -18,6 +18,7 @@
     ]
   },
   "scripts": {
+    "analyze": "source-map-explorer build/static/js/main.*",
     "precommit": "lint-staged",
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
@@ -30,8 +31,8 @@
     "lint-staged": "^6.1.0",
     "node-sass": "^4.8.3",
     "prettier": "^1.10.2",
-    "redux-devtools-extension": "^2.13.2",
     "redux-thunk": "^2.2.0",
-    "sass-loader": "^6.0.7"
+    "sass-loader": "^6.0.7",
+    "source-map-explorer": "^1.5.0"
   }
 }
