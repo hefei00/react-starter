@@ -11,7 +11,7 @@ const enhancers = []
 const middleware = [thunk, routerMiddleware(history)]
 
 if (process.env.NODE_ENV === 'development') {
-  // TODO: add some middleware for better development
+  // TODO: add some middleware for better development experience, such as redux-logger, redux-development
 }
 
 const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers)
