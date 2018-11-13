@@ -6,7 +6,7 @@ import {
   incrementAsync,
   decrement,
   decrementAsync
-} from '../../modules/counter'
+} from '../../store/modules/counter'
 
 const Count = props => (
   <div>
@@ -49,4 +49,7 @@ const mapDispatchToProps = dispatch =>
     dispatch
   )
 
-export default connect(mapStateToProps, mapDispatchToProps)(Count)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Count)
