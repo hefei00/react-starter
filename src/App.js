@@ -1,8 +1,8 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
-import Home from './containers/home'
-import About from './containers/about'
-import Topics from './containers/topics'
+import { Router, Link } from '@reach/router'
+import Home from './pages/home'
+import About from './pages/about'
+import Count from './pages/count'
 
 const App = () => (
   <div>
@@ -15,14 +15,16 @@ const App = () => (
           <Link to="/about">About</Link>
         </li>
         <li>
-          <Link to="/topics">Topics</Link>
+          <Link to="/count">Count</Link>
         </li>
       </ul>
     </nav>
     <hr />
-    <Route exact path="/" component={Home} />
-    <Route path="/about" component={About} />
-    <Route path="/topics" component={Topics} />
+    <Router>
+      <Home path="/" />
+      <About path="/about" />
+      <Count path="/count" />
+    </Router>
   </div>
 )
 

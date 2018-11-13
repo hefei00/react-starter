@@ -1,5 +1,4 @@
 import React from 'react'
-import { push } from 'react-router-redux'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import {
@@ -9,11 +8,10 @@ import {
   decrementAsync
 } from '../../modules/counter'
 
-const Home = props => (
+const Count = props => (
   <div>
-    <h1>Home</h1>
+    <h1>Count</h1>
     <p>Count: {props.count}</p>
-
     <p>
       <button onClick={props.increment} disabled={props.isIncrementing}>
         Increment
@@ -31,12 +29,6 @@ const Home = props => (
         Decrement Async
       </button>
     </p>
-
-    <p>
-      <button onClick={() => props.changePage()}>
-        Go to about page via redux
-      </button>
-    </p>
   </div>
 )
 
@@ -52,10 +44,9 @@ const mapDispatchToProps = dispatch =>
       increment,
       incrementAsync,
       decrement,
-      decrementAsync,
-      changePage: () => push('/about-us')
+      decrementAsync
     },
     dispatch
   )
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Count)
