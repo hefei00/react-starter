@@ -2,40 +2,55 @@
   "name": "react-starter",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@reach/router": "^1.2.1",
-    "react": "^16.2.0",
-    "react-app-rewired": "^1.4.1",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.7",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "next",
-    "react-scripts": "1.1.0",
-    "redux": "^3.7.2"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write",
-      "eslint",
       "git add"
     ]
   },
-  "scripts": {
-    "analyze": "source-map-explorer build/static/js/main.*",
-    "precommit": "lint-staged",
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test --env=jsdom"
+  "dependencies": {
+    "@types/jest": "24.0.16",
+    "@types/node": "12.6.8",
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "16.8.5",
+    "husky": "^3.0.2",
+    "lint-staged": "^9.2.1",
+    "prettier": "^1.18.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "source-map-explorer": "^2.0.1",
+    "typescript": "3.5.3"
   },
-  "devDependencies": {
-    "antd": "^3.4.0",
-    "babel-plugin-import": "^1.7.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2",
-    "react-test-renderer": "^16.6.3",
-    "redux-thunk": "^2.2.0",
-    "source-map-explorer": "^1.5.0"
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
